@@ -1,33 +1,16 @@
-# scala/play-getting-started
+# scala/bino1
 
-A barebones Scala app (using the Play framework), which can easily be deployed to Heroku.  
-
-This application support the [Getting Started with Scala/Play on Heroku](https://devcenter.heroku.com/articles/getting-started-with-scala) article - check it out.
+This is a Q and A web application written in Scala
 
 ## Running Locally
 
-Make sure you have Play and sbt installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+Make sure you have Play and sbt installed.
 
 ```sh
-$ git clone https://github.com/heroku/scala-getting-started.git
-$ cd scala-getting-started
+$ git clone git@github.com:RaminEsfandiari/bino1s.git
+$ cd bino1s
 $ sbt compile stage
-$ heroku local
+$ sbt run
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-
-## Documentation
-
-For more information about using Play and Scala on Heroku, see these Dev Center articles:
-
-- [Play and Scala on Heroku](https://devcenter.heroku.com/categories/language-support#scala-and-play)
-
+Your app should now be running on [localhost:9000](http://localhost:9000/).
