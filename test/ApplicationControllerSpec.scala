@@ -13,6 +13,6 @@ class ApplicationControllerSpec extends FlatSpec with Matchers{
   "ApplicationController" should
    "load front page successfully" in {
       val result: Future[Result] = TestApplicationController.get().apply(FakeRequest())
-      contentAsString(result) should include("hello")
-    }
+      contentAsString(result) should include("bino1")
+   }
 }

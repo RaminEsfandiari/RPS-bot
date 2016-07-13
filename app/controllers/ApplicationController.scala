@@ -1,5 +1,6 @@
 package controllers
 
+import play.api.i18n.Messages
 import play.api.mvc._
 
 import scala.concurrent.Future
@@ -7,12 +8,22 @@ import scala.concurrent.Future
 
 trait ApplicationController extends Controller {
 
+//  val title = Messages("home.title")
+
   def get = Action.async {
-    implicit request => Future.successful(Ok(views.html.index("hello")))
+    implicit request => Future.successful(Ok(views.html.index("bino1")))
   }
 }
 
 object ApplicationController extends ApplicationController
+
+
+
+
+
+
+
+
 
 //  def index = Action {
 //    RelativisticModel.select()
