@@ -2,13 +2,14 @@ package controllers
 
 import play.api.mvc._
 
+import scala.concurrent.Future
+
 
 trait ApplicationController extends Controller {
 
-  def get = Action {
-    Ok(views.html.index("hello"))
+  def get = Action.async {
+    implicit request => Future.successful(Ok(views.html.index("hello")))
   }
-
 }
 
 object ApplicationController extends ApplicationController
