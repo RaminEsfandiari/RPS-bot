@@ -1,18 +1,24 @@
 import controllers.ApplicationController
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatestplus.play.PlaySpec
 import play.api.mvc.Result
 import play.api.test.FakeRequest
 import play.api.test.Helpers._
 
 import scala.concurrent.Future
 
-class ApplicationControllerSpec extends FlatSpec with Matchers{
+class ApplicationControllerSpec extends PlaySpec{
 
-  object TestApplicationController extends ApplicationController
+  object TestApplicationController extends ApplicationController{
 
-  "ApplicationController" should
-   "load front page successfully" in {
+  }
+
+  "ApplicationController" must {
+
+    "load front page successfully" in {
       val result: Future[Result] = TestApplicationController.get().apply(FakeRequest())
-      contentAsString(result) should include("bino1")
-   }
+      contentAsString(result) must include("bino1")
+    }
+
+  }
+
 }
