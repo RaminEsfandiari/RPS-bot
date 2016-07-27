@@ -8,9 +8,7 @@ import scala.concurrent.Future
 
 class ApplicationControllerSpec extends PlaySpec{
 
-  object TestApplicationController extends ApplicationController{
-
-  }
+  object TestApplicationController extends ApplicationController
 
   "ApplicationController" must {
 
