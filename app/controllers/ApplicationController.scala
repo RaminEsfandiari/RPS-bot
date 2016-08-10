@@ -1,22 +1,19 @@
 package controllers
 
-import play.api.i18n.Messages
-import play.api.mvc._
+import javax.inject.Inject
 
+import play.api.i18n.{Messages, I18nSupport, MessagesApi}
+import play.api.mvc._
 import scala.concurrent.Future
 
-
-trait ApplicationController extends Controller {
-
-//  val title = Messages("home.title")
+class ApplicationController @Inject()(val messagesApi:MessagesApi) extends Controller with I18nSupport{
 
   def get = Action.async {
-    implicit request => Future.successful(Ok(views.html.index("bino1")))
+    implicit request => Future.successful(Ok(views.html.index(Messages("title"))))
   }
 }
 
-object ApplicationController extends ApplicationController
-
+object ApplicationController
 
 
 

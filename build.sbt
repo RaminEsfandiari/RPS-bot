@@ -1,4 +1,4 @@
-name := """play-getting-started"""
+name := """bino1"""
 
 version := "1.0-SNAPSHOT"
 
@@ -11,8 +11,7 @@ libraryDependencies ++= Seq(
   cache,
   "org.postgresql" % "postgresql" % "9.4-1201-jdbc41",
   ws,
-  "org.jscience" % "jscience" % "4.3.1",
-  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.0" % "test"
+  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % "test"
 )
 
 libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _ )
