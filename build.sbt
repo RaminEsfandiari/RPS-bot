@@ -1,4 +1,4 @@
-name := """bino1"""
+name := """play-getting-started"""
 
 version := "1.0-SNAPSHOT"
 
