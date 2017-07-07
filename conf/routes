@@ -1,10 +1,15 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
+
 
 # Home page
 GET     /                           controllers.ApplicationController.get
-# GET     /db                         controllers.ApplicationController.db
+
+GET     /move                       controllers.MoveController.move
+POST    /move                       controllers.MoveController.lastOpponentMove
+
+POST    /start                      controllers.StartController.start
+
+
+# GET   /db                         controllers.ApplicationController.db
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
