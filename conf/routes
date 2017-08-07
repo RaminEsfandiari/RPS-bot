@@ -4,7 +4,7 @@
 
 
 GET     /move                       controllers.MoveController.move
-POST    /move                       controllers.MoveController.lastOpponentMove
+POST    /move                       controllers.MoveController.lastMove
 
 POST    /start                      controllers.StartController.start
 

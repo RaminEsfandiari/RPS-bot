@@ -5,11 +5,14 @@ import play.api.mvc.{Action, Controller}
 
 class MoveController extends Controller {
 
+  var mostRecentMove: String = ""
+
   def move() = Action {
+    lastMove == "ROCK"
     Ok(Json.toJson("ROCK"))
   }
 
-  def lastOpponentMove() = Action {
-    Ok
+  def lastMove() = Action {
+    Ok(Json.toJson(mostRecentMove))
   }
 }
