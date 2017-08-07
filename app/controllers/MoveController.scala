@@ -21,6 +21,9 @@ class MoveController extends Controller {
   }
 
   def lastMove() = Action {
+    // how would you know I am not lying about my last move and sending back paper all the time?
     Ok(Json.toJson(mostRecentMove))
   }
+
+
 }
