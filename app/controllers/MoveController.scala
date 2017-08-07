@@ -5,7 +5,7 @@ import play.api.mvc.{Action, Controller}
 
 class MoveController extends Controller {
 
-  var mostRecentMove: String = ""
+  var mostRecentMove = ""
 
   val ROCK = "Rock"
   val PAPER = "Paper"
@@ -16,7 +16,7 @@ class MoveController extends Controller {
 
   def move() = Action {
     val m = list(r.nextInt(3))
-    lastMove == m
+    mostRecentMove = m
     Ok(Json.toJson(m))
   }
 
