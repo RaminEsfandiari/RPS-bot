@@ -6,7 +6,7 @@
 GET     /move                       controllers.MoveController.move
 POST    /move                       controllers.MoveController.lastOpponentMove
 
-GET     /start                      controllers.StartController.start
+POST    /start                      controllers.StartController.start
 
 
 # GET   /db                         controllers.ApplicationController.db
